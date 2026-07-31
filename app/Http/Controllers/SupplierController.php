@@ -29,11 +29,22 @@ class SupplierController extends Controller
             || $request->filled('view')
             || session()->has('errors');
 
+            $modalTitle = 'Tambah Supplier';
+            if ($viewSupplier) {
+                $modalTitle = 'Detail Supplier';
+            } elseif ($editSupplier) {
+                $modalTitle = 'Edit Supplier';
+            }
+
+        $activeSupplier = $editSupplier ?? $viewSupplier;
+        $isViewMode = filled($viewSupplier);
+
         return view('suppliers.index', compact(
             'suppliers',
+            'showModal',
             'editSupplier',
             'viewSupplier',
-            'showModal'
+            'modalTitle'
         ));
     }
 

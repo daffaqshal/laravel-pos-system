@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-8 mt-2">
+    <div class="py-8">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <!-- @if (session('success'))
                 <div class="mb-4 rounded-md bg-green-100 p-4 text-sm text-green-700">
@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    @if ($showModal)
+    <!-- @if ($showModal)
         @php
             $activeSupplier = $editSupplier ?? $viewSupplier;
             $isViewMode = filled($viewSupplier);
@@ -214,5 +214,8 @@
                 </form>
             </div>
         </div>
-    @endif
+    @endif -->
+
+    @include('suppliers._modal')
+
 </x-app-layout>

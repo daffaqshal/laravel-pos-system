@@ -28,8 +28,9 @@
 
         </a>
 
-        <a href="#"
-           class="flex items-center rounded-lg px-4 py-3 mb-1 text-gray-300 hover:bg-slate-800">
+        <a href="{{ route('products.index') }}"
+           class="flex items-center rounded-lg px-4 py-3 mb-1
+           {{ request()->routeIs('products.*') ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-slate-800' }}">
 
             Barang
 
@@ -39,15 +40,17 @@
             Transaksi
         </p>
 
-        <a href="#"
-           class="flex items-center rounded-lg px-4 py-3 mb-1 text-gray-300 hover:bg-slate-800">
+        <a href="{{ route('purchases.index') }}"
+           class="flex items-center rounded-lg px-4 py-3 mb-1
+           {{ request()->routeIs('purchases.*') ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-slate-800' }}">
 
             Pembelian
 
         </a>
 
-        <a href="#"
-           class="flex items-center rounded-lg px-4 py-3 mb-1 text-gray-300 hover:bg-slate-800">
+        <a href="{{ route('sales.index') }}"
+           class="flex items-center rounded-lg px-4 py-3 mb-1
+           {{ request()->routeIs('sales.*') ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-slate-800' }}">
 
             Penjualan
 
